@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XGBoost Model Prediction</title>
+</head>
+<body>
+    <h1>XGBoost Model Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="patientid">Patient ID:</label><br>
+        <input type="number" id="patientid" name="patientid"><br>
+        
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br>
+        
+        <label for="gender">Gender:</label><br>
+        <input type="number" id="gender" name="gender"><br>
+        
+        <label for="chestpain">Chest Pain:</label><br>
+        <input type="number" id="chestpain" name="chestpain"><br>
+        
+        <label for="restingBP">Resting BP:</label><br>
+        <input type="number" id="restingBP" name="restingBP"><br>
+        
+        <label for="serumcholestrol">Serum Cholestrol:</label><br>
+        <input type="number" id="serumcholestrol" name="serumcholestrol"><br>
+        
+        <label for="fastingbloodsugar">Fasting Blood Sugar:</label><br>
+        <input type="number" id="fastingbloodsugar" name="fastingbloodsugar"><br>
+        
+        <label for="restingrelectro">Resting Electro:</label><br>
+        <input type="number" id="restingrelectro" name="restingrelectro"><br>
+        
+        <label for="maxheartrate">Max Heart Rate:</label><br>
+        <input type="number" id="maxheartrate" name="maxheartrate"><br>
+        
+        <label for="exerciseangia">Exercise Angia:</label><br>
+        <input type="number" id="exerciseangia" name="exerciseangia"><br>
+        
+        <label for="oldpeak">Old Peak:</label><br>
+        <input type="number" step="any" id="oldpeak" name="oldpeak"><br>
+        
+        <label for="slope">Slope:</label><br>
+        <input type="number" id="slope" name="slope"><br>
+        
+        <label for="noofmajorvessels">No of Major Vessels:</label><br>
+        <input type="number" id="noofmajorvessels" name="noofmajorvessels"><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
